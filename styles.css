@@ -1,14 +1,28 @@
 @font-face {
     font-family: 'Outfit';
     src: url('./assets/fonts/outfit/static/Outfit-Regular.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('./assets/fonts/outfit/static/Outfit-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('./assets/fonts/outfit/static/Outfit-Bold.ttf') format('truetype');
+    font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Young Serif';
     src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
-    font-weight: lighter;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -29,18 +43,21 @@ body{
     flex-direction: column;
     background: white;
     border-radius: 20px;
+    line-height: 1.6;
+    margin-bottom: 10px;
 }
+
 
 .content img{
     width: 100%;
-    max-width: 375px;
+    max-width: 380px;
     border-radius: 15px;
 }
 
 .content .prep{
     background-color: hsl(330, 100%, 98%);
     border-radius: 5%;
-    padding: 1% 2%;
+    padding: 1% 1%;
 }
 
 h1, h2, h3{
@@ -64,9 +81,13 @@ h2{
     margin-left: 20px;
 }
 
+b {
+    font-weight: 600;
+}
+
 p, li{
     font-family: Outfit;
-    font-size: 12px;
+    font-size: 14px;
     color: hsl(30, 10%, 34%);
 }
 
@@ -76,4 +97,40 @@ p, li{
 
 li::marker{
     color: hsl(14, 45%, 36%);
+}
+
+/* Nutrition table styling */
+.Nutrition {
+    margin-top: 1.5rem;
+}
+
+.Nutrition table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.Nutrition tr {
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.Nutrition tr:last-child {
+    border-bottom: none;
+}
+
+.Nutrition td {
+    padding: 0.75rem 0;
+    font-size: 14px;
+    text-align: left;
+}
+
+.nutrition-label {
+    color: hsl(30, 10%, 34%);
+    font-family: Outfit;
+    text-align: right;
+}
+
+.nutrition-value {
+    color: hsl(14, 45%, 36%);
+    font-weight: 600;
+    text-align: right;
 }
